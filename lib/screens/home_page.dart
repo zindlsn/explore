@@ -44,12 +44,12 @@ class _HomePageState extends State<HomePage> {
         : 1;
 
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       extendBodyBehindAppBar: true,
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppBar(
               backgroundColor:
-                  Theme.of(context).bottomAppBarColor.withOpacity(_opacity),
+                  Theme.of(context).bottomAppBarTheme.color?.withOpacity(_opacity),
               elevation: 0,
               centerTitle: true,
               actions: [

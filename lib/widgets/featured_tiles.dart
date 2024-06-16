@@ -57,8 +57,7 @@ class FeaturedTiles extends StatelessWidget {
                                   fontWeight: FontWeight.w500,
                                   color: Theme.of(context)
                                       .primaryTextTheme
-                                      .subtitle1!
-                                      .color,
+                                      .titleSmall?.color,
                                 ),
                               ),
                             ),
@@ -107,8 +106,7 @@ class FeaturedTiles extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                             color: Theme.of(context)
                                 .primaryTextTheme
-                                .subtitle1!
-                                .color,
+                                .titleSmall?.color,
                           ),
                         ),
                       ),

@@ -40,10 +40,9 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
         child: Text(
           items[i],
           style: TextStyle(
-            color: _isHovering[i]
-                ? Theme.of(context).primaryTextTheme.button!.decorationColor
-                : Theme.of(context).primaryTextTheme.button!.color,
-          ),
+              color: _isHovering[i]
+                  ? ButtonTheme.of(context).colorScheme?.onSurface
+                  : ButtonTheme.of(context).colorScheme?.onSurface),
         ),
       );
       Widget spacer = SizedBox(
@@ -106,10 +105,9 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                                 child: Text(
                                   items[pageIndex],
                                   style: TextStyle(
-                                      color: Theme.of(context)
-                                          .primaryTextTheme
-                                          .button!
-                                          .color,
+                                      color: ButtonTheme.of(context)
+                                          .colorScheme
+                                          ?.onSurface,
                                       fontSize: 16),
                                 ),
                               ),

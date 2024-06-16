@@ -140,16 +140,13 @@ class _DestinationCarouselState extends State<DestinationCarousel> {
                                         child: Text(
                                           places[i],
                                           style: TextStyle(
-                                            color: _isHovering[i]
-                                                ? Theme.of(context)
-                                                    .primaryTextTheme
-                                                    .button!
-                                                    .decorationColor
-                                                : Theme.of(context)
-                                                    .primaryTextTheme
-                                                    .button!
-                                                    .color,
-                                          ),
+                                              color: _isHovering[i]
+                                                  ? ButtonTheme.of(context)
+                                                      .colorScheme
+                                                      ?.onSurface
+                                                  : ButtonTheme.of(context)
+                                                      .colorScheme
+                                                      ?.onSurface),
                                         ),
                                       ),
                                     ),

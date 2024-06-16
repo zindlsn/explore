@@ -15,7 +15,7 @@ String? imageUrl;
 /// For checking if the user is already signed into the
 /// app using Google Sign In
 Future getUser() async {
-  await Firebase.initializeApp();
+/*  await Firebase.initializeApp();
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
   bool authSignedIn = prefs.getBool('auth') ?? false;
@@ -29,7 +29,7 @@ Future getUser() async {
       userEmail = user.email;
       imageUrl = user.photoURL;
     }
-  }
+  } */
 }
 
 /// For authenticating user using Google Sign In
@@ -38,7 +38,7 @@ Future getUser() async {
 /// Retrieves some general user related information
 /// from their Google account for ease of the login process
 Future<User?> signInWithGoogle() async {
-  await Firebase.initializeApp();
+  /* await Firebase.initializeApp();
 
   User? user;
 
@@ -82,7 +82,7 @@ Future<User?> signInWithGoogle() async {
       } catch (e) {
         print(e);
       }
-    }
+    } 
   }
 
   if (user != null) {
@@ -95,11 +95,11 @@ Future<User?> signInWithGoogle() async {
     prefs.setBool('auth', true);
   }
 
-  return user;
+  return user; */
 }
 
 Future<User?> registerWithEmailPassword(String email, String password) async {
-  await Firebase.initializeApp();
+  /*await Firebase.initializeApp();
   User? user;
 
   try {
@@ -124,11 +124,11 @@ Future<User?> registerWithEmailPassword(String email, String password) async {
     print(e);
   }
 
-  return user;
+  return user; */
 }
 
 Future<User?> signInWithEmailPassword(String email, String password) async {
-  await Firebase.initializeApp();
+  /*  await Firebase.initializeApp();
   User? user;
 
   try {
@@ -153,24 +153,24 @@ Future<User?> signInWithEmailPassword(String email, String password) async {
     }
   }
 
-  return user;
+  return user; */
 }
 
 Future<String> signOut() async {
-  await _auth.signOut();
+  /* await _auth.signOut();
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
   prefs.setBool('auth', false);
 
   uid = null;
   userEmail = null;
-
+*/
   return 'User signed out';
 }
 
 /// For signing out of their Google account
 void signOutGoogle() async {
-  await googleSignIn.signOut();
+  /* await googleSignIn.signOut();
   await _auth.signOut();
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -179,7 +179,7 @@ void signOutGoogle() async {
   uid = null;
   name = null;
   userEmail = null;
-  imageUrl = null;
+  imageUrl = null;*/
 
   print("User signed out of Google account");
 }
